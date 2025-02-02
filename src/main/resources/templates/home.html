@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+
+    <h1>home.html</h1>
+
+    <form method = "POST"
+        th:action = "@{/order}"
+        th:object = "${order}">
+
+        <label for="Order Date">Order Date</label>
+        <input type="date" id="Order Date" th:field="*{orderDate}">
+
+        <br />
+
+        <label for="Customer Name">Customer Name</label>
+        <input type="text" id="Customer Name" th:field="*{customerName}">
+
+        <br />
+
+        <label for="Ship Address">Ship Address</label>
+        <input type="text" id="Ship Address" th:field="*{shipAddress}">
+
+        <br />
+
+        <label for="Notes">Notes</label>
+        <input type="text" id="Notes" th:field="*{notes}">
+
+        <br />
+
+        <label for="Tax">Tax</label>
+        <input type="number" id="Tax" th:field="*{tax}" step="0.01">
+
+        <br />
+        <button type="submit">Submit</button>
+
+    </form>
+    
+</body>
+</html>
