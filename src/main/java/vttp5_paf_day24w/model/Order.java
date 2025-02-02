@@ -1,7 +1,7 @@
 package vttp5_paf_day24w.model;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.List;
 
 public class Order {
 
@@ -10,6 +10,8 @@ public class Order {
     private String shipAddress; 
     private String notes; 
     private double tax = 0.05;
+    private List<OrderDetail> orderDetails;
+    
     public Order() {
     }
     public Order(LocalDate orderDate, String customerName, String shipAddress, String notes, double tax) {
